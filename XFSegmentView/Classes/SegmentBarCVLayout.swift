@@ -2,27 +2,27 @@
 
 import UIKit
 
-class SegmentBarCVLayout: UICollectionViewLayout {
+ open class SegmentBarCVLayout: UICollectionViewLayout {
     private var attriArray:[UICollectionViewLayoutAttributes] = []
-    var frameY:CGFloat = 0
-    var frameX:CGFloat = 0
-    var contentHeight: CGFloat = 0
-    var contentWidth: CGFloat = 0
-    var itemHeight: CGFloat = 0
-    var itemWidth: CGFloat = 0
+    open var frameY:CGFloat = 0
+    open var frameX:CGFloat = 0
+    open var contentHeight: CGFloat = 0
+    open var contentWidth: CGFloat = 0
+    open var itemHeight: CGFloat = 0
+    open var itemWidth: CGFloat = 0
     
-    init(_ itemWidth: CGFloat, _ itemHeight: CGFloat) {
+    public init(_ itemWidth: CGFloat, _ itemHeight: CGFloat) {
         super.init()
         self.itemWidth = itemWidth
         self.itemHeight = itemHeight
         self.contentHeight = itemHeight
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func prepare() {
+    open override func prepare() {
         attriArray.removeAll()
         contentHeight = 0
         contentWidth = 0
@@ -40,7 +40,7 @@ class SegmentBarCVLayout: UICollectionViewLayout {
         }
     }
     
-    override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+    open override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         
         let attri = UICollectionViewLayoutAttributes.init(forCellWith: indexPath)
         attri.frame = CGRect(x: itemWidth * CGFloat(indexPath.row),
@@ -51,12 +51,12 @@ class SegmentBarCVLayout: UICollectionViewLayout {
         return attri
     }
     
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    open override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         return attriArray
     }
     
     
-    override var collectionViewContentSize: CGSize {
+    open override var collectionViewContentSize: CGSize {
         get {
             return CGSize(width: contentWidth, height:contentHeight)
         }

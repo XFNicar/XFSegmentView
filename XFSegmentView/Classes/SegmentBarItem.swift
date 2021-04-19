@@ -2,11 +2,11 @@
 
 import UIKit
 
-class SegmentBarItem: UICollectionViewCell {
+open class SegmentBarItem: UICollectionViewCell {
 
-    var titleLabel: UILabel!
+    open var titleLabel: UILabel!
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         titleLabel = UILabel.init()
         titleLabel.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
@@ -15,7 +15,7 @@ class SegmentBarItem: UICollectionViewCell {
         addSubview(titleLabel)
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
