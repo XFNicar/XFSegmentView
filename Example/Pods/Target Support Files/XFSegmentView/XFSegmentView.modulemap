@@ -1,0 +1,6 @@
+framework module XFSegmentView {
+  umbrella header "XFSegmentView-umbrella.h"
+
+  export *
+  module * { export * }
+}
