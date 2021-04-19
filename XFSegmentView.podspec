@@ -32,6 +32,8 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'XFSegmentView/Classes/**/*'
   
+  s.swift_version = "4.2"
+  
   # s.resource_bundles = {
   #   'XFSegmentView' => ['XFSegmentView/Assets/*.png']
   # }
