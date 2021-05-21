@@ -16,6 +16,7 @@ open class SegmentBar: UIView,UICollectionViewDataSource {
     open var lineWidth: CGFloat = 40
     open var lineOrginY: CGFloat = 43
     open var subTitleFont: UIFont = UIFont.systemFont(ofSize: 14)
+    open var selectedFont: UIFont?
     open var selectedTitleColor: UIColor = .black
     open var deSelectedTitleColor: UIColor = .gray
     open var titleFont : UIFont {
@@ -98,12 +99,16 @@ open class SegmentBar: UIView,UICollectionViewDataSource {
     open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifer, for: indexPath) as! SegmentBarItem
         cell.titleLabel.text = barItems[indexPath.row]
+        cell.titleLabel.font = subTitleFont
         if indexPath.row == selectedIndex {
             cell.titleLabel.textColor = selectedTitleColor
+            if let font = selectedFont {
+                cell.titleLabel.font = font
+            }
         } else {
             cell.titleLabel.textColor = deSelectedTitleColor
         }
-        cell.titleLabel.font = subTitleFont
+        
         return cell
     }
 
