@@ -2,15 +2,18 @@
 
 import UIKit
 
- open class SegmentBarCVLayout: UICollectionViewLayout {
+open class SegmentBarCVLayout: UICollectionViewLayout {
+    // 布局对象数组
     private var attriArray:[UICollectionViewLayoutAttributes] = []
-    open var frameY:CGFloat = 0
-    open var frameX:CGFloat = 0
+    // 内容范围高度
     open var contentHeight: CGFloat = 0
+    // 内容范围宽度
     open var contentWidth: CGFloat = 0
+    // item高度
     open var itemHeight: CGFloat = 0
+    // item宽度
     open var itemWidth: CGFloat = 0
-    
+    // 构造函数
     public init(_ itemWidth: CGFloat, _ itemHeight: CGFloat) {
         super.init()
         self.itemWidth = itemWidth
@@ -26,7 +29,7 @@ import UIKit
         attriArray.removeAll()
         contentHeight = 0
         contentWidth = 0
-
+        
         let allSection = self.collectionView?.dataSource?.numberOfSections?(in: self.collectionView!)
         for section in 0...(allSection!-1) {
             let allRow = self.collectionView?.dataSource?.collectionView(self.collectionView!, numberOfItemsInSection: section)

@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		A0590DF927C4D3A900CEAF9B /* SegmentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0590DF827C4D3A900CEAF9B /* SegmentListViewController.swift */; };
 		A314EA7FF6ABBB1081EA0F2D /* Pods_XFSegmentView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26AFAB662F95D2896702F2D /* Pods_XFSegmentView_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		82FF146FEB2AF1FD08A110B5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		938AB1134D8F4D430D6A6E26 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		99E9AD707D0C1349138C86A5 /* Pods-XFSegmentView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFSegmentView_Tests.release.xcconfig"; path = "Target Support Files/Pods-XFSegmentView_Tests/Pods-XFSegmentView_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A0590DF827C4D3A900CEAF9B /* SegmentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentListViewController.swift; sourceTree = "<group>"; };
 		AF09C4D4E6DA60A681E32FE7 /* Pods-XFSegmentView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFSegmentView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-XFSegmentView_Tests/Pods-XFSegmentView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C26AFAB662F95D2896702F2D /* Pods_XFSegmentView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XFSegmentView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F41666A1B8D1F6F1AE939381 /* XFSegmentView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = XFSegmentView.podspec; path = ../XFSegmentView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -104,6 +106,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				A0590DF827C4D3A900CEAF9B /* SegmentListViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -352,6 +355,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				A0590DF927C4D3A900CEAF9B /* SegmentListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

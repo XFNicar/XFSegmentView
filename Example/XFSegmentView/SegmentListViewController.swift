@@ -1,12 +1,15 @@
-
+//
+//  SegmentListViewController.swift
+//  XFSegmentView_Example
+//
+//  Created by 言乙 on 2022/2/22.
+//  Copyright © 2022 CocoaPods. All rights reserved.
+//
 
 import UIKit
 import XFSegmentView
 
-class ViewController: UIViewController,SegmentViewDelegate,SegmentViewDataSource {
-    
-    
-    
+class SegmentListViewController: UIViewController,SegmentViewDelegate,SegmentViewDataSource {
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -25,25 +28,21 @@ class ViewController: UIViewController,SegmentViewDelegate,SegmentViewDataSource
         configUI()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        let segmentVC = SegmentListViewController()
-        present(segmentVC, animated: true, completion: nil)
-    }
-    
     func configUI()  {
 //        segmentView = SegmentView.init(frame: CGRect(x: 0, y: safeTopHeight(), width: view.frame.width, height: view.frame.height - safeTopHeight()))
-//        segmentView.dataSource = self
-//        segmentView.segmentBar.backgroundColor = .white
-//        segmentView.segmentBar.selectedTitleColor = .black
-//        segmentView.segmentBar.deSelectedTitleColor = .gray
-//        segmentView.segmentBar.lineView.backgroundColor = .black
-//        segmentView.segmentBar.itemWidth = view.frame.width / 4
-//        segmentView.segmentBar.lineWidth = 25
-//        segmentView.myScrollView.isScrollEnabled = false
-//        view.addSubview(segmentView)
-//        segmentView.reloadData()
-//        segmentView.segmentBar.titleFont = UIFont.systemFont(ofSize: 16)
+        segmentView = SegmentView.init(frame: view.frame)
+        segmentView.dataSource = self
+        segmentView.segmentBar.backgroundColor = .white
+        segmentView.segmentBar.selectedTitleColor = .black
+        segmentView.segmentBar.deSelectedTitleColor = .gray
+        segmentView.segmentBar.lineView.backgroundColor = .black
+        segmentView.segmentBar.itemWidth = view.frame.width / 4
+        segmentView.segmentBar.lineWidth = 25
+        segmentView.isPagingEnabled = false
+        segmentView.enablePageAnimation = false
+        view.addSubview(segmentView)
+        segmentView.reloadData()
+        segmentView.segmentBar.titleFont = UIFont.systemFont(ofSize: 16)
         
     }
     
@@ -93,6 +92,5 @@ class ViewController: UIViewController,SegmentViewDelegate,SegmentViewDataSource
         }
         return safeBottom
     }
-    
-}
 
+}
